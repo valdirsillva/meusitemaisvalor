@@ -1,0 +1,171 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Contact {
+  id          Int      @id @default(autoincrement())
+  name        String
+  email       String
+  phoneNumber String
+  message     String
+  created_at  DateTime
+
+  @@map("contacts")
+}
+
+model Suggestion_or_doubt {
+  id           Int    @id @default(autoincrement())
+  content_name String
+  relationType String
+
+  name    String?
+  email   String?
+  file    String?
+  message String
+
+  @@map("Suggestions_or_doubts")
+}
+
+model Question {
+  id       Int    @id @default(autoincrement())
+  question String
+}
+
+model Answer {
+  id          Int    @id @default(autoincrement())
+  answer_text String
+  questionId  Int
+
+  @@map("answers")
+}
+
+model Candidate {
+  id       Int     @id @default(autoincrement())
+  name     String
+  gender   String
+  phone    String
+  email    String
+  city     String
+  state    String
+  area     String
+  has_file String?
+  comment  String
+
+  @@map("candidates")
+}
+
+model Report {
+  id Int @id @default(autoincrement())
+
+  fullname String?
+  email    String?
+  phone    String?
+
+  details           String? // detalhes do relato
+  has_witnesses     String? // Existem testemunhas ?
+  evidence_of_facts String? // Evidência do(s) fato(s)
+  has_balance       String? // Valor financeiro
+  suggestion        String? // Sugestão
+  has_file          String? // Existe anexos 
+
+  relationID     Int // ID do tipo de relação do relator com a empresa
+  relationTypeID Int // Tipo de relato
+  branchID       Int // ID da filial onde ocorreu o relato
+  factAwareID    Int // ID da opção de Como tomou consciencia do fato
+
+  channelID         Int // ID do canal onde ocorreu o fato
+  isManagerAware    Boolean? // Indica se o Gerente ou Supervisor estava ciente do fato
+  isManagerInvolved Boolean // Indica se o Gerente ou Supervisor estava ciente do fato
+
+  relation     Relation     @relation(fields: [relationID], references: [id])
+  relationType RelationType @relation(fields: [relationTypeID], references: [id])
+  branch       Branch       @relation(fields: [branchID], references: [id])
+  fact         FactAware    @relation(fields: [factAwareID], references: [id])
+  channel      Channel      @relation(fields: [channelID], references: [id])
+
+  @@map("reports")
+}
+
+model Department {
+  id           Int            @id @default(autoincrement())
+  name         String
+  email        String
+  phoneNumber  String?
+  RelationType RelationType[]
+
+  @@map("departments")
+}
+
+model RelationType {
+  id       Int      @id @default(autoincrement())
+  relation String
+  Report   Report[]
+
+  departmentId Int
+  department   Department @relation(fields: [departmentId], references: [id])
+
+  @@map("relationstypes")
+}
+
+model Relation {
+  id           Int      @id @default(autoincrement())
+  typeRelation String
+  Report       Report[]
+
+  @@map("relations")
+}
+
+model Branch {
+  id         Int      @id @default(autoincrement())
+  branchText String
+  Report     Report[]
+
+  @@map("branchs")
+}
+
+model FactAware {
+  id       Int      @id @default(autoincrement())
+  factText String
+  Report   Report[]
+
+  @@map("factsAware")
+}
+
+model Client {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String
+  phone      String
+  cpf        String
+  created_at DateTime
+
+  productId Int
+  product   Product @relation(fields: [productId], references: [id])
+
+  @@map("clients")
+}
+
+model Product {
+  id     Int      @id @default(autoincrement())
+  name   String
+  client Client[]
+
+  @@map("products")
+}
+
+model Channel {
+  id          Int      @id @default(autoincrement())
+  channelName String
+  Report      Report[]
+
+  @@map("channel")
+}

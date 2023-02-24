@@ -1,0 +1,266 @@
+{
+  "departments": [
+    {
+      "name": "RH",
+      "email": "atendimentoaac@maisvalor.com.br",
+      "phoneNumber": "11 9999-0011"
+    },
+    {
+      "name": "SAC",
+      "email": "atendimentoaac@maisvalor.com.br",
+      "phoneNumber": "11 9999-0011"
+    },
+    {
+      "name": "DP",
+      "email": "atendimentoaac@maisvalor.com.br",
+      "phoneNumber": "11 9999-0011"
+    },
+    {
+      "name": "C.I",
+      "email": "atendimentoaac@maisvalor.com.br",
+      "phoneNumber": "11 9999-0011"
+    }
+  ],
+  "report_type": [
+    {
+      "relation": "Assédio moral",
+      "departmentId": 1
+    },
+    {
+      "relation": "Assédio sexual",
+      "departmentId": 1
+    },
+    {
+      "relation": "Agressão física",
+      "departmentId": 1
+    },
+    {
+      "relation": "Conflito de interesses",
+      "departmentId": 1
+    },
+    {
+      "relation": "Discriminação",
+      "departmentId": 1
+    },
+    {
+      "relation": "Destruição ou danos a patrimônio da empresa",
+      "departmentId": 1
+    },
+    {
+      "relation": "Elogios",
+      "departmentId": 1
+    },
+    {
+      "relation": "Favorecimento de clientes ou fornecedores",
+      "departmentId": 2
+    },
+    {
+      "relation": "Fraude",
+      "departmentId": 2
+    },
+    {
+      "relation": "Dúvidas com folha de pagamento / recisão / descontos indevidos",
+      "departmentId": 1
+    },
+    {
+      "relation": "Não cumprimento de políticas e procedimentos internos",
+      "departmentId": 4
+    },
+    {
+      "relation": "Propaganda enganosa",
+      "departmentId": 2
+    },
+    {
+      "relation": "Roubo, furto ou desvio de materiais da empresa",
+      "departmentId": 1
+    },
+    {
+      "relation": "Uso indevido de recursos da empresa",
+      "departmentId": 1
+    },
+    {
+      "relation": "Vazamento ou uso indevido de informações internas",
+      "departmentId": 4
+    },
+    {
+      "relation": "Violação de leis",
+      "departmentId": 3
+    },
+    {
+      "relation": "Não me pertube",
+      "departmentId": 3
+    },
+    {
+      "relation": "Pedido de pagamento de valores",
+      "departmentId": 1
+    },
+    {
+      "relation": "Nao reconheço uma operação",
+      "departmentId": 1
+    },
+    {
+      "relation": "Contrato com valores divergentes",
+      "departmentId": 1
+    },
+    {
+      "relation": "Informação",
+      "departmentId": 1
+    },
+    {
+      "relation": "Reclamação",
+      "departmentId": 1
+    },
+    {
+      "relation": "Outros",
+      "departmentId": 1
+    }
+  ],
+  "type_of_relationship_with_company": [
+    {
+      "typeRelation": "Colaborador"
+    },
+    {
+      "typeRelation": "Ex colaborador"
+    },
+    {
+      "typeRelation": "Parceiro"
+    },
+    {
+      "typeRelation": "Prestador de serviço"
+    },
+    {
+      "typeRelation": "Cliente"
+    }
+  ],
+  "how_i_know_facts": [
+    {
+      "factText": "Aconteceu comigo"
+    },
+    {
+      "factText": "Ouvi falar"
+    },
+    {
+      "factText": "Um colega de trabalho me contou"
+    },
+    {
+      "factText": "O denunciado me contou"
+    },
+    {
+      "factText": "Ouvi por acaso"
+    },
+    {
+      "factText": "Encontrei um documento ou arquivo"
+    },
+    {
+      "factText": "Outros"
+    }
+  ],
+  "company_branches": [
+    {
+      "branchText": "Americana"
+    },
+    {
+      "branchText": "Belém"
+    },
+    {
+      "branchText": "Belo Horizonte"
+    },
+    {
+      "branchText": "Blumenau"
+    },
+    {
+      "branchText": "Brasília"
+    },
+    {
+      "branchText": "Cuiabá"
+    },
+    {
+      "branchText": "Goiânia"
+    },
+    {
+      "branchText": "Jacareí"
+    },
+    {
+      "branchText": "Lorena"
+    },
+    {
+      "branchText": "Macapá"
+    },
+    {
+      "branchText": "Matriz São Paulo"
+    },
+    {
+      "branchText": "Niteroi"
+    },
+    {
+      "branchText": "Nova Iguaçú"
+    },
+    {
+      "branchText": "Ponta Grossa"
+    },
+    {
+      "branchText": "Praia Grande"
+    },
+    {
+      "branchText": "Recife"
+    },
+    {
+      "branchText": "Registro"
+    },
+    {
+      "branchText": "Santo André"
+    },
+    {
+      "branchText": "Santos"
+    },
+    {
+      "branchText": "Taubaté"
+    }
+  ],
+  "channels": [
+    {
+      "channelName": "Telefone"
+    },
+    {
+      "channelName": "WhatsApp"
+    },
+    {
+      "channelName": "E-mail"
+    },
+    {
+      "channelName": "De forma presencial"
+    }
+  ],
+  "products": [
+    {
+      "name": "CRÉDITO PESSOAL"
+    },
+    {
+      "name": "PORTABILIDADE DE CREDITO"
+    },
+    {
+      "name": "FINANCIAMENTO IMOBILIÁRIO"
+    },
+    {
+      "name": "CARTÃO BENEFÍCIOS"
+    },
+    {
+      "name": "CREDITO VEÍCULO"
+    },
+    {
+      "name": "EMPRÉSTIMO CONSIGNADO"
+    },
+    {
+      "name": "PORTABILIDADE EMPRÉSTIMO"
+    },
+    {
+      "name": "CONSÓRCIO"
+    },
+    {
+      "name": "SAQUE ANIVERSARIO"
+    },
+    {
+      "name": "GARANTIA IMÓVEL"
+    }
+  ]
+}
