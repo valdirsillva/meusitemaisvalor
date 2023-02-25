@@ -28,7 +28,7 @@ app.use("/api", routerCandidate)
 app.use("/api", routerDepartments)
 app.use("/api", routerSuggestionOrDoubt)
 
-app.listen(process.env.APP_PORT, () => {
+app.listen(process.env.APP_PORT || 8888, () => {
     console.log(`RUNNING ADDRESS: http://localhost:${process.env.APP_PORT}`)
 })
 
